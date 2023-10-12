@@ -365,6 +365,9 @@ form textarea {
   section {
     padding: 50px 4%;
   }
+  .scroll-down {
+    display: none;
+  }
 }
 @media (max-width: 881px) {
   :root {
@@ -408,9 +411,6 @@ form textarea {
     position: absolute;
     top: 1.4rem;
     right: 2rem;
-  }
-  .scroll-down {
-    display: none;
   }
   .home {
     grid-template-columns: 0.5fr 3fr;
