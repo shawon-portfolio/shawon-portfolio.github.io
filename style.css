@@ -235,13 +235,25 @@ span {
   width: 90%;
 }
 .bootstrap-bar {
-  width: 85%;
+  width: 90%;
 }
 .js-bar {
-  width: 55%;
+  width: 85%;
 }
-.react-bar {
-  width: 95%;
+.ts-bar {
+  width: 85%;
+}
+.sql-bar {
+  width: 60%;
+}
+.angular-bar {
+  width: 80%;
+}
+.angular-material {
+  width: 85%;
+}
+.ionic-bar {
+  width: 55%;
 }
 .services-content {
   display: grid;
