@@ -363,7 +363,7 @@ form textarea {
 .footer {
   display: grid;
   place-items: center;
-  padding: 50px;
+  /* padding: 50px; */
   background: var(--main-color);
   color: #fff;
 }
