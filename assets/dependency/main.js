@@ -27,3 +27,21 @@ darkmode.onclick = () => {
         document.body.classList.remove('active');
     }
 }
+
+// Function to scroll to top smoothly
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Function to toggle the visibility of the scroll to top button
+window.onscroll = function() {
+    var button = document.getElementById("scrollTopBtn");
+    if (window.pageYOffset > 200) { // Show after 200px of scrolling down
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};

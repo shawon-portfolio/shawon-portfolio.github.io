@@ -465,6 +465,11 @@ form textarea {
     display: flex;
     justify-content: center;
   }
+  #scrollTopBtn { 
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
 }
 @media (max-width: 340px) {
   :root {
@@ -487,4 +492,20 @@ form textarea {
   .contact-form form {
     width: auto;
   }
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none; /* Initially hidden */
+  padding: 12px; 
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Makes the button round */
+  width: 50px;  /* Setting width and height ensures a perfect circle */
+  height: 50px; 
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a little shadow for better visibility */
 }
