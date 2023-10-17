@@ -393,6 +393,9 @@ form textarea {
   .scroll-down {
     display: none;
   }
+  .cursor, .cursor2 {
+    display: none !important;
+  }
 }
 @media (max-width: 881px) {
   :root {
