@@ -363,7 +363,7 @@ form textarea {
 .footer {
   display: grid;
   place-items: center;
-  padding: 50px;
+  /* padding: 50px; */
   background: var(--main-color);
   color: #fff;
 }
@@ -392,6 +392,9 @@ form textarea {
   }
   .scroll-down {
     display: none;
+  }
+  .cursor, .cursor2 {
+    display: none !important;
   }
 }
 @media (max-width: 881px) {
@@ -465,6 +468,11 @@ form textarea {
     display: flex;
     justify-content: center;
   }
+  #scrollTopBtn { 
+    position: fixed;
+    bottom: 20px !important;
+    right: 20px !important;
+  }
 }
 @media (max-width: 340px) {
   :root {
@@ -488,3 +496,70 @@ form textarea {
     width: auto;
   }
 }
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: none; /* Initially hidden */
+  padding: 12px; 
+  color: #fff;
+  border: none;
+  border-radius: 50%; /* Makes the button round */
+  width: 50px;  /* Setting width and height ensures a perfect circle */
+  height: 50px; 
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a little shadow for better visibility */
+}
+
+/* custom cursor design for light mode */
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid black;
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 9999;
+}
+
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+  z-index: 9999;
+}
+
+/* for dark mode */
+/* Styles for dark mode */
+body.active .cursor {
+  border-color: white;
+}
+
+body.active .cursor2 {
+  background-color: white;
+  opacity: .7; /* Increased opacity for better visibility */
+}
+
+.hover {
+  /* background-color: white; */
+  opacity: 0.8;
+}
+
+.cursorinnerhover {
+  width: 50px;
+  height: 50px;
+  opacity: .5;
+}
+
