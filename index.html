@@ -704,36 +704,33 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="https://formspree.io/f/xzblyenz" method="POST" class="php-email-form" id="contactForm" data-aos="fade-up" data-aos-delay="200">
+            <form action="https://formspree.io/f/xzblyenz" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
-            
+
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
                 </div>
-            
-                <div class="col-md-6">
-                  <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
                 </div>
-            
+
                 <div class="col-md-12">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
-            
+
                 <div class="col-md-12">
-                  <textarea name="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
-            
+
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-            
-                  <div class="inline">
-                    <button type="button" class="btn btn-secondary" onclick="resetForm()">Reset</button>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                  </div>
+
+                  <button type="submit">Send Message</button>
                 </div>
-            
+
               </div>
             </form>
           </div><!-- End Contact Form -->
@@ -784,11 +781,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    function resetForm() {
-      document.getElementById("contactForm").reset();
-    }
-  </script>
 
 </body>
 
