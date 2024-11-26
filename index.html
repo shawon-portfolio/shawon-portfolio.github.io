@@ -724,11 +724,8 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="button" value="Reset" class="btn btn-outline-secondary me-2" onclick="resetForm()" style="border-radius: 20px;">Reset form</button>
+                  <button type="submit" class="btn btn-outline-primary">Send Message</button>
                 </div>
 
               </div>
@@ -781,6 +778,11 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function resetForm() {
+        document.getElementById("contactForm").reset();
+    }
+  </script>
 
 </body>
 
