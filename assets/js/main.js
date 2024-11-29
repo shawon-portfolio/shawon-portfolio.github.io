@@ -264,3 +264,27 @@ a.forEach(item => {
     cursor.classList.remove('hover');
   });
 })
+
+// Get the toggle button and icon
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeIcon = document.getElementById('darkModeIcon');
+
+// Check if dark mode is saved in localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+  document.body.classList.add('dark-mode');
+  darkModeIcon.classList.replace('bi-moon', 'bi-sun'); // Change the icon to sun
+}
+
+// Toggle dark mode when the button is clicked
+darkModeToggle.addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+
+  // Change the icon based on the current mode
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeIcon.classList.replace('bi-moon', 'bi-sun'); // Sun icon
+    localStorage.setItem('darkMode', 'enabled'); // Save dark mode to localStorage
+  } else {
+    darkModeIcon.classList.replace('bi-sun', 'bi-moon'); // Moon icon
+    localStorage.setItem('darkMode', 'disabled'); // Remove dark mode from localStorage
+  }
+});
