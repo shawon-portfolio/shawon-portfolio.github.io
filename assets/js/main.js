@@ -288,3 +288,24 @@ darkModeToggle.addEventListener('click', function() {
     localStorage.setItem('darkMode', 'disabled'); // Remove dark mode from localStorage
   }
 });
+
+// Function to calculate the age
+function calculateAge(birthDate) {
+  const birthDateObj = new Date(birthDate);
+  const currentDate = new Date();
+  
+  let age = currentDate.getFullYear() - birthDateObj.getFullYear();
+  const monthDiff = currentDate.getMonth() - birthDateObj.getMonth();
+  
+  // Adjust age if the birthday hasn't occurred yet this year
+  if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDateObj.getDate())) {
+    age--;
+  }
+  
+  return age;
+}
+
+// Set the dynamic age
+const birthday = document.getElementById('birthday').textContent.trim(); // Get birthday text
+const age = calculateAge(birthday);
+document.getElementById('age').textContent = age; // Set age dynamically
