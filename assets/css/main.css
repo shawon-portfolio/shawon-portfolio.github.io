@@ -26,7 +26,7 @@
 
 /* Dark theme */
 body.dark-mode {
-  --background-color: #060606;
+  --background-color: #1e1e1e;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #0563bb;
