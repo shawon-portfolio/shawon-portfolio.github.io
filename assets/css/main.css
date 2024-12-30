@@ -107,8 +107,22 @@ body.dark-mode #darkModeIcon {
   font-size: 1.5rem;
 }
 
-body.dark-mode #hero img {
-  display: none;  /* Hide image in dark mode */
+/* Show the light image by default */
+#hero img.light-show {
+  display: block;
+}
+
+#hero img.dark-show {
+  display: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode #hero img.light-show {
+  display: none;  /* Hide the light image in dark mode */
+}
+
+body.dark-mode #hero img.dark-show {
+  display: block;  /* Show the dark image in dark mode */
 }
 
 body.dark-mode .light-background {
